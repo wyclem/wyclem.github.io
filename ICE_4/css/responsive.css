@@ -1,0 +1,43 @@
+@media only screen and (min-width: 650px) {
+  .top-nav ul li {
+    display: inline-block;
+    border: none;
+  }
+  .top-nav ul {
+    margin: 0 auto;
+    width: fit-content;
+    border-top: 1px solid red;
+  }
+  .vertical-box {
+    display: inline-block;
+    width: 47.5%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .logo {
+    display: inline-block;
+    float: left;
+    height: 100%;
+  }
+  .top-nav ul {
+    display: inline-block;
+    float: right;
+    border: none;
+    height: 100%;
+    padding: .5em;
+  }
+  .top-nav:before {
+    clear: both;
+  }
+  .top-nav:after {
+    clear: both;
+  }
+  .photo-cell {
+    display: inline-block;
+    width: 47.5%;
+  }
+  .vertical-box {
+    width: 22.5%;
+  }
+}
