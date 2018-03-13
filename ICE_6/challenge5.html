@@ -38,7 +38,9 @@
 
 	<script type="text/javascript">
 	function updateImage(newImage) {
-		document.getElementById('image').style.background = 'url(' + newImage.src + ')';
+		document.getElementById('image').style.background = "url('" + newImage.src + "')";
+		document.getElementById('image').style.backgroundPosition = 'center'
+		document.getElementById('image').style.backgroundSize = 'cover'
 		document.getElementById('image').innerHTML = newImage.alt;
 	}
 	function revertImage() {
