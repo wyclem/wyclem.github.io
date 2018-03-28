@@ -1,0 +1,93 @@
+html, body, header, footer {
+	font-family: "Raleway", sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+.about {
+	display: block;
+	width: 100%;
+	height: fit-content;
+	overflow: hidden;
+	text-align: center;
+}
+
+body {
+	margin: 0;
+}
+
+.project-slides {
+	display: block;
+	width: 100%;
+	min-height: 50%;
+	overflow: hidden;
+	text-align: center;
+}
+
+header {
+	width: 100%;
+	margin: 0;
+	background: azure;
+	font-size: 105%;
+	box-shadow: 0px 18px 26px 1px rgba(141, 141, 139, .75);
+	position: fixed;
+}
+
+nav {
+	width: 100%;
+	background: azure;
+	margin: 0;
+	padding: 0;
+
+}
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+	width: 100%;
+	padding: 0;
+	display: block;
+}
+
+nav li {
+	border-bottom-style: solid;
+	border-bottom-color: mediumseagreen;
+}
+
+nav li a {
+	font-size: 1em;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+.main-content {
+	padding-top: 110px;
+	padding-bottom: 0S;
+	width: 98%;
+	margin: auto;
+}
+
+.profile {
+	border-radius: 50%;
+	max-height: 50%;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+
+.project-image {
+	height: auto;
+	width: 100%;
+	margin: auto;
+	display: none;
+}
+
+footer {
+	height: 5%;
+	margin: 0;
+	background: azure;
+}

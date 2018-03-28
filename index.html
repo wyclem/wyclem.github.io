@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Wyatt Clement</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-content">
+      <section class="about">
+        <img src="images/Profile.jpg" alt="Wyatt Clement" class="profile">
+        <h1>Wyatt Clement</h1>
+        <p>I am a graduate student at the University of Michigan School of Information, specializing in User Experience Research and Design</p>
+      </section>
+      <section class="project-slides">
+        <img src="images/Botanical_Poster.jpg" class="project-image" alt="Botanical Poster">
+        <img src="images/Valentines_poster.jpg" class="project-image" alt="Valentine's Day Poster">
+        <img src="images/errol_the_snail.jpg" class="project-image" alt="Snail">
+      </section>
+    </div>
+    <footer>
+      <p>Created by Wyatt Clement</p>
+    </footer>
+
+    <script>
+      var myIndex = 0;
+      carousel();
+
+      function carousel() {
+          var i;
+          var x = document.getElementsByClassName("project-image");
+          for (i = 0; i < x.length; i++) {
+             x[i].style.display = "none";  
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}    
+          x[myIndex-1].style.display = "block";  
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+  </body>
+</html>
+
+
