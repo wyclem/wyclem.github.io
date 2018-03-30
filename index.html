@@ -3,51 +3,93 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyatt Clement</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html" class="current-page">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
     <div class="main-content">
       <section class="about">
-        <img src="images/Profile.jpg" alt="Wyatt Clement" class="profile">
+        <img src="./images/Profile.jpg" alt="Wyatt Clement" class="profile">
         <h1>Wyatt Clement</h1>
         <p>I am a graduate student at the University of Michigan School of Information, specializing in User Experience Research and Design</p>
       </section>
       <section class="project-slides">
-        <img src="images/Botanical_Poster.jpg" class="project-image" alt="Botanical Poster">
-        <img src="images/Valentines_poster.jpg" class="project-image" alt="Valentine's Day Poster">
-        <img src="images/errol_the_snail.jpg" class="project-image" alt="Snail">
+        <h2>Projects</h2>
+        <div class="project">
+          <img src="./images/Botanical_Poster.jpg" class="project-image" alt="Botanical Poster">
+          <div class="project-name">
+            <p>Botanical Poster</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/Valentines_poster.jpg" class="project-image" alt="Valentine's Day Poster">
+          <div class="project-name">
+            <p>Valentine's Day Poster</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/errol_the_snail.jpg" class="project-image" alt="Snail">
+          <div class="project-name">
+            <p>Snail Vector</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/IHAA.jpg" class="project-image" alt="IHAA Logo">
+          <div class="project-name">
+            <p>IHAA Logo Style Guide</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/upark.jpg" class="project-image" alt="Upark App">
+          <div class="project-name">
+            <p>U(M) Park App</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/persona.jpg" class="project-image" alt="Conference Materials">
+          <div class="project-name">
+            <p>Conference Materials</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="./images/web-mockup.jpg" class="project-image" alt="Website Mockup">
+          <div class="project-name">
+            <p>Website Mockups</p>
+          </div>
+        </div>
       </section>
     </div>
     <footer>
       <p>Created by Wyatt Clement</p>
     </footer>
 
-    <script>
+    <script type="text/javascript">
       var myIndex = 0;
       carousel();
 
       function carousel() {
           var i;
-          var x = document.getElementsByClassName("project-image");
+          var x = document.getElementsByClassName("project");
           for (i = 0; i < x.length; i++) {
              x[i].style.display = "none";  
           }
           myIndex++;
           if (myIndex > x.length) {myIndex = 1}    
           x[myIndex-1].style.display = "block";  
-          setTimeout(carousel, 2000); // Change image every 2 seconds
+          setTimeout(carousel, 4000); 
       }
     </script>
 

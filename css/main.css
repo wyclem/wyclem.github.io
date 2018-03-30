@@ -6,24 +6,40 @@ html, body {
 	height: 100%;
 }
 
+.main-content {
+	padding-top: 110px;
+	padding-bottom: 50px;
+	width: 98%;
+	margin: auto;
+}
+
 .about {
 	display: block;
+	position: relative;
 	width: 100%;
-	height: fit-content;
-	overflow: hidden;
+	height: 40vh;
+	overflow: contain;
 	text-align: center;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 2vh;
 }
 
 body {
 	margin: 0;
+	background: honeydew;
 }
 
 .project-slides {
 	display: block;
+	position: relative;
 	width: 100%;
-	min-height: 50%;
+	height: 60vh;
+	margin: 0;
 	overflow: hidden;
 	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-color: grey;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 header {
@@ -33,11 +49,12 @@ header {
 	font-size: 105%;
 	box-shadow: 0px 18px 26px 1px rgba(141, 141, 139, .75);
 	position: fixed;
+	z-index: 11;
 }
 
 nav {
 	width: 100%;
-	background: azure;
+	background: palegoldenrod;
 	margin: 0;
 	padding: 0;
 
@@ -58,16 +75,19 @@ nav li {
 
 nav li a {
 	font-size: 1em;
+	font-weight: bold;
+	color: black;
 	display: block;
 	text-align: center;
 	text-decoration: none;
 }
 
-.main-content {
-	padding-top: 110px;
-	padding-bottom: 0S;
-	width: 98%;
-	margin: auto;
+nav li a:hover, nav li a:focus {
+	background: lightgrey;
+}
+
+.current-page, .current-page:hover, .current-page:focus {
+	background: mediumseagreen;
 }
 
 .profile {
@@ -79,15 +99,45 @@ nav li a {
 	margin: auto;
 }
 
+.project {
+	position: relative;
+	border-style: solid;
+	border-color: grey;
+}
+
 .project-image {
 	height: auto;
 	width: 100%;
 	margin: auto;
-	display: none;
+}
+
+.project-name {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	background: rgba(60, 179, 113, 0.9);
+	box-shadow: 0px 10px 20px 1px rgba(141, 141, 139, .75);
+	display: block;
+}
+
+.project-list-item {
+	height: 40vh;
+	margin-bottom: 3vh;
+	overflow: hidden;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project-list-item:last-of-type {
+	margin-bottom: 0;
 }
 
 footer {
 	height: 5%;
+	width: 100%;
 	margin: 0;
-	background: azure;
+	background: palegoldenrod;
+	position: fixed;
+	bottom: 0;
 }

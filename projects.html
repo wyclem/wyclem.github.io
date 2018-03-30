@@ -3,19 +3,78 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyatt Clement - Projects</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li>About</li>
-          <li>Contact</li>
+          <li><a href="projects.html" class="current-page">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <div class="main-content">
+      <div class="project project-list-item">
+        <img src="./images/Botanical_poster.jpg" class="project-image">
+        <div class="project-name">
+          <p>Botanical Poster</p>
+          <p class="project-description">Taking a botanical illustration, I used masking and isolation techniques to add text and make it feel like part of the image</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/Valentines_poster.jpg" class="project-image">
+        <div class="project-name">
+          <p>Valentine's Day Poster</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/errol_the_snail.jpg" class="project-image">
+        <div class="project-name">
+          <p>Snail Vector</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/IHAA.jpg" class="project-image">
+        <div class="project-name">
+          <p>IHAA Logo Style Guide</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/upark.jpg" class="project-image">
+        <div class="project-name">
+          <p>Snail Vector</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/persona.jpg" class="project-image">
+        <div class="project-name">
+          <p>Conference Materials</p>
+        </div>
+      </div>
+      <div class="project project-list-item">
+        <img src="./images/web-mockup.jpg" class="project-image">
+        <div class="project-name">
+          <p>Website Mockups</p>
+        </div>
+      </div>
+      <footer>
+        <p>Created by Wyatt Clement</p>
+      </footer>
+      <script>
+        $(document).ready(function() {
+          $(".project-description").toggle();
+
+          $(".project-name").click(function(){
+            $(this).find(".project-description").toggle();
+          });
+        });
+      </script>
   </body>
 </html>
