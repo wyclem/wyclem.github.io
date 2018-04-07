@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyatt Clement - Projects</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/media_queries.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
+      <p class="title">Wyatt's Portfolio</p>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -23,59 +25,82 @@
     <div class="main-content">
       <div class="project project-list-item">
         <img src="./images/Botanical_Poster.jpg" class="project-image" alt="Botanical Poster">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>Botanical Poster</p>
-          <p class="project-description">Taking a botanical illustration, I used masking and isolation techniques to add text and make it feel like part of the image</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">Taking a botanical illustration, I used masking and isolation techniques to add text and make it feel like part of the image</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/Valentines_poster.jpg" class="project-image" alt="Valentine's Day Poster">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>Valentine's Day Poster</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">Inspired by artist Luba Lukova, I made a simple pairing of a vectorized sketch and a quotation against a solid background.</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/errol_the_snail.jpg" class="project-image" alt="Snail">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>Snail Vector</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">Given a sketch of a snail, I used the pen and pencil tools in Adobe Illustrator to bring it to life, adding details like shadows and accents.</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/IHAA.jpg" class="project-image" alt="IHAA Style Guide">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>IHAA Logo Style Guide</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">I designed a logo for a fictional organization in Ann Arbor, Michigan, based on details concerning the organization's message and mission. Bouncing off of this, I further developed the identity of the organization through a full style guide.</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/upark.jpg" class="project-image" alt="UPark App">
-        <div class="project-name">
-          <p>Snail Vector</p>
+        <div class="project-name project-list-name">
+          <p>UPark App</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">I developed the UPark app as a solution to student parking issues on the University of Michigan's campus, taking the idea from the brainstorming stage through to a high fidelity prototype.</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/persona.jpg" class="project-image" alt="Conference Materials">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>Conference Materials</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">Provided typographic elements, I designed several materials for a fictional conference using Adboe Illustrator, focusing on color harmony, layout, and image isolation.</p>
         </div>
       </div>
       <div class="project project-list-item">
         <img src="./images/web-mockup.jpg" class="project-image" alt="Website Mockups">
-        <div class="project-name">
+        <div class="project-name project-list-name">
           <p>Website Mockups</p>
+          <i class="more"></i>
+          <p class="project-description project-list-description">I used a provided template to create three website mock-ups, varying the image selection, color harmony, and tone across each</p>
         </div>
       </div>
-      <footer>
-        <p>Created by Wyatt Clement</p>
-      </footer>
-      <script>
-        $(document).ready(function() {
-          $(".project-description").toggle();
-
-          $(".project-name").click(function(){
-            $(this).find(".project-description").toggle();
-          });
-        });
-      </script>
+      <div id="mobile-indicator">
+      </div>
     </div>
+    <footer>
+      <p>Created by Wyatt Clement</p>
+    </footer>
+    <script>
+      $(document).ready(function() {
+        function checkmobile() {
+          if ($("#mobile-indicator").css("display") == "none") {
+            $(".project-list-description").toggle();
+
+            $(".project-name").click(function(){
+              $(this).find(".project-list-description").toggle();
+            });
+          }
+        }
+        checkmobile();
+        $(window).resize(function() {
+          location.reload();
+        });
+      });
+    </script>
   </body>
 </html>

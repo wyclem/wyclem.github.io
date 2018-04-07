@@ -1,0 +1,19 @@
+@import "variables";
+
+%home-cards {
+	display: block;
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	text-align: center;
+	box-shadow: $card-shadow;
+	background: $back-color;
+}
+
+@mixin home-cards-tablet() {
+	display: inline-block;
+	position: absolute;
+	width: 48%;
+	height: $home-height;
+	padding-top: ($top-padding - 50px);
+}

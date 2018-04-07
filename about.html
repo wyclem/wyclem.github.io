@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyatt Clement</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/media_queries.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
+      <p class="title">Wyatt's Portfolio</p>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -21,22 +24,91 @@
     </header>
     <div class="main-content">
       <h1>About Me</h1>
-      <h2>Education</h2>
-      <h3>Master of Science in Information, 2019</h3>
-      <p>University of Michigan School of Information</p>
-      <p>Specializing in UX Research and Design</p>
-      <h3>Bachelor of Arts in Psychology, 2017</h3>
-      <p>University of Michigan College of Literature, Science, and the Arts</p>
-      <h2>Experience</h2>
-      <h3>Research Assistant</h3>
-      <h4>ABCD Study</h4>
-      <p>2016-Present</p>
-      <h3>Clerk/Intern</h3>
-      <h4>Matthaei Botanical Gardens and Arboretum</h4>
-      <p>2016-Present</p>
+      <div class="education">
+        <h2>Education</h2>
+        <div class="panel">
+          <h3>Master of Science in Information, 2019</h3>
+          <p>University of Michigan School of Information</p>
+          <p>Specializing in UX Research and Design</p>
+          <h3>Bachelor of Arts in Psychology, 2017</h3>
+          <p>University of Michigan College of Literature, Science, and the Arts</p>
+        </div>
+      </div>
+      <div class="experience">
+        <h2>Experience</h2>
+        <div class="panel">
+          <h3>Research Assistant</h3>
+          <h4>ABCD Study</h4>
+          <p>2016-Present</p>
+          <h3>Clerk/Intern</h3>
+          <h4>Matthaei Botanical Gardens and Arboretum</h4>
+          <p>2016-Present</p>
+        </div>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <div class='panel'>
+          <p>Python</p>
+          <p>Oral Communication</p>
+          <p>Project Planning</p>
+          <p>Adobe Products (Illustrator, Photoshop)</p>
+        </div>
+      </div>
+    </div>
+    <div id="mobile-indicator">
     </div>
     <footer>
       <p>Created by Wyatt Clement</p>
     </footer>
+    <script>
+      $(document).ready(function() {
+        if ($("#mobile-indicator").css('display') == 'none') {
+          $('.panel').toggle();
+          $('.education').css("height", "fit-content");
+          $('.experience').css('height', 'fit-content');
+          $('.skills').css('height', 'fit-content');
+          var x = 1;
+          var y = 1;
+          var z = 1;
+
+          $('.education').click(function() {
+            $(this).find('.panel').toggle();
+            if (x == 1) {
+              $(this).css('height', '50vh');
+              x = 0;
+            } else if (x == 0) {
+              $(this).css('height', 'fit-content');
+              x = 1;
+            }
+          });
+
+          $('.experience').click(function() {
+            $(this).find('.panel').toggle();
+            if (y == 1) {
+              $(this).css('height', '50vh');
+              y = 0;
+            } else if (y == 0) {
+              $(this).css('height', 'fit-content');
+              y = 1;
+            }
+          });
+
+          $('.skills').click(function() {
+            $(this).find('.panel').toggle();
+            if (z == 1) {
+              $(this).css('height', 'fit-content');
+              z = 0;
+            } else if (z == 0) {
+              $(this).css('height', 'fit-content');
+              z = 1;
+            }
+          });
+        }
+
+        $(window).resize(function() {
+          location.reload();
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,232 @@
+@import "utilities/variables";
+@import "utilities/extensions";
+
+html, body, header, footer {
+	font-family: "Raleway", sans-serif;
+}
+
+html, body {
+	height: 100%;
+}
+
+.main-content {
+	padding-top: $top-padding;
+	padding-bottom: 50px;
+	width: 98%;
+	margin: auto;
+}
+
+#index {
+	padding-top: 0;
+	padding-bottom: 80px;
+}
+
+.about {
+	@extend %home-cards;
+	height: 40vh;
+	padding-top: $top-padding;
+	margin-bottom: 2vh;
+}
+
+.directions {
+	display: none;
+}
+
+body {
+	margin: 0;
+	background: $back-color;
+}
+
+.project-slides {
+	@extend %home-cards;
+	height: 60vh;
+	margin: 0;
+}
+
+header {
+	width: 100%;
+	margin: 0;
+	background: $head-color;
+	font-size: 105%;
+	box-shadow: $overlay-shadow;
+	position: fixed;
+	z-index: 11;
+}
+
+.title {
+	display: block;
+	color: $head-text-color;
+	margin: 0;
+	padding: 0.75%;
+	font-size: 1.5em;
+	width: 100%;
+	text-align: center;
+	border-bottom-style: solid;
+	border-bottom-color: $back-color;
+}
+
+nav {
+	width: 100%;
+	background: $head-color;
+	margin: auto;
+	padding: 0;
+
+}
+nav {
+	ul {
+		list-style-type: none;
+		text-align: center;
+		margin: auto;
+		width: 100%;
+		padding: 0;
+		display: block;
+	}
+
+	li {
+		border-bottom-style: solid;
+		border-bottom-color: $nav-border-color;
+	}
+
+	a {
+		font-size: 1em;
+		font-weight: bold;
+		color: $head-text-color;
+		display: block;
+		text-align: center;
+		text-decoration: none;
+		margin: auto;
+	}
+
+	a:hover {
+		background: grey;
+	}
+
+	a:focus {
+		background: grey;
+	}
+	
+}
+
+.current-page, .current-page:hover, .current-page:focus {
+	background: $back-color;
+	color: $head-color;
+}
+
+.profile {
+	position: relative;
+	border-radius: 50%;
+	max-height: 50%;
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	margin: auto;
+}
+
+.project {
+	position: relative;
+}
+
+.project-image {
+	height: auto;
+	width: 100%;
+	margin: auto;
+}
+
+.project-name {
+	position: absolute;
+	z-index: 10;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	background: rgba(60, 179, 113, 0.9);
+	box-shadow: $overlay-shadow;
+	display: block;
+}
+
+.project-list-name p {
+	margin-bottom: 0;
+	cursor: pointer;
+}
+
+.project-description {
+	display: none;
+	padding: 1%;
+}
+
+.project-list-description {
+	display: block;
+}
+
+.project-list-item {
+	height: 50vh;
+	margin-bottom: 3vh;
+	overflow: hidden;
+	box-shadow: $card-shadow;
+}
+
+.project-list-item:last-of-type {
+	margin-bottom: 0;
+}
+
+.more {
+	border: solid $head-color;
+	border-width: 0 1px 1px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(45deg);
+	margin-bottom: 0.5%;
+}
+
+#mobile-indicator {
+	display: none;
+}
+
+.education, .experience {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 50vh;
+	padding-top: 0.5%;
+	text-align: left;
+	box-shadow: $card-shadow;
+	margin-bottom: 2vh;
+	background: $back-color;
+}
+
+
+.skills {
+	display: block;
+	position: relative;
+	width: 100%;
+	text-align: left;
+	padding-top: 0.5%;
+	box-shadow: $card-shadow;
+	background: $back-color;
+}
+
+.experience h3, .experience h4, .experience p, .education h3, .education p, .skills p {
+	padding-left: 5%;
+}
+
+.education h2, .experience h2, .skills h2 {
+	text-align: center;
+}
+
+.phone, .email {
+	font-size: 1.5em;
+}
+
+#email-form {
+	display: none;
+}
+
+footer {
+	height: 5%;
+	width: 100%;
+	margin: 0;
+	background: $head-color;
+	color: $head-text-color;
+	font-size: 0.75em;
+	position: fixed;
+	bottom: 0;
+}
